@@ -11,14 +11,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Session middleware
 
 // Create an instance of Pusher
-const pusher = new Pusher({
-    appId: 'XXX-APP-ID',
-    key: 'XXX-APP-KEY',
-    secret: 'XXX-APP-SECRET',
-    cluster: 'XXX-APP-CLUSTER',
-    encrypted: true
-});
 
+const pusher = new Pusher({
+    appId: "1862404",
+    key: "d9aff37d4b0745bfbcba",
+    secret: "65c95f559742ce4ff7f6",
+    cluster: "ap2",
+    useTLS: true,
+    encrypted: true
+  });
 
 app.get('/', (req, res) => {
     return res.sendFile(__dirname + '/index.html');
